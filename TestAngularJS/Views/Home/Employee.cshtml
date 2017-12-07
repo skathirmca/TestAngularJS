@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Employee";
+}
+<h2>Employee</h2>
+<input type="button" value="Display All" ng-click="getAll();" />
+<input type="text" ng-model="searchEmpName" />
+{{searchEmpName}}
+<br />
+<table>
+  <tr ng-repeat="x in employee | filter:searchEmpName">
+    <td>{{ x.EmployeeName }}</td>
+    <td>{{ x.Age }}</td>
+  </tr>
+</table>
